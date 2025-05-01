@@ -1,0 +1,38 @@
+version: "3.9"
+
+services:
+  # 1) Base de données
+  db:
+    image: mysql:8
+    env_file: .env                     # reprend tes variables
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+    ports: ["3306:3306"]               # 3306 visible sur ta machine
+    volumes:
+      - dbdata:/var/lib/mysql          # données persistantes
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # 2) Backend Spring Boot
+  backend:
+    build: ./backend                   # Dockerfile du dossier backend
+    depends_on:
+      db:
+        condition: service_healthy     # attend que MySQL soit UP
+    env_file: .env                     # mêmes variables
+    ports: ["8080:8080"]
+    volumes:
+      - ./backend/logs:/app/logs       # (option) logs accessibles sur host
+
+  # 3) (Option) Frontend React
+  web:
+     build: ./web
+     depends_on: [backend]
+     ports: ["5173:80"]
+
+volumes:
+  dbdata:                              # volume nommé persistant
