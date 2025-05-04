@@ -28,7 +28,7 @@ services:
     volumes:
       - ./backend/logs:/app/logs       # (option) logs accessibles sur host
 
-  # 3) (Option) Frontend React
+  # 3)  Frontend React
   web:
      build: ./web
      depends_on: [backend]
