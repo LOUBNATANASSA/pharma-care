@@ -3,7 +3,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { addMedication } from "../services/medicationService";
 
 export default function MedicationForm() {
-  const [medication, setMedication] = useState({
+  const [form, setForm] = useState({
     name: "",
     reference: "",
     price: 0,
@@ -19,8 +19,7 @@ export default function MedicationForm() {
     mutationFn: addMedication,
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["medications"] });
-      // Réinitialiser le formulaire
-      setMedication({
+      setForm({
         name: "",
         reference: "",
         price: 0,
@@ -30,41 +29,30 @@ export default function MedicationForm() {
         storage: "",
       });
     },
-    onError: (error) => {
-      console.error("Erreur d’ajout de médicament :", error);
-    },
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setMedication((prev) => ({
-      ...prev,
-      [name]: name === "price" ? parseFloat(value) || 0 : value,
-    }));
+    setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    mutation.mutate(medication);
+    mutation.mutate(form);
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      {Object.keys(medication).map((key) => (
-        <div key={key}>
-          <label>{key}</label>
-          <input
-            type={key === "price" ? "number" : "text"}
-            name={key}
-            value={medication[key as keyof typeof medication]}
-            onChange={handleChange}
-            required={key !== "dosage"} // dosage est nullable
-          />
-        </div>
+    <form onSubmit={handleSubmit} style={{ marginBottom: "20px" }}>
+      {Object.keys(form).map((key) => (
+        <input
+          key={key}
+          name={key}
+          value={form[key as keyof typeof form]}
+          onChange={handleChange}
+          placeholder={key}
+          style={{ margin: "5px", padding: "5px" }}
+        />
       ))}
-      <button type="submit" disabled={mutation.isPending}>
-        {mutation.isPending ? "Ajout..." : "Ajouter"}
-      </button>
+      <button type="submit" style={{ padding: "5px 10px" }}>➕ Ajouter</button>
     </form>
   );
 }

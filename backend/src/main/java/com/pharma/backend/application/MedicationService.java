@@ -35,6 +35,18 @@ public class MedicationService {
         m.setStorage(dto.storage());
         return repo.save(m);
     }
+    public Medication update(Long id, MedicationDTO dto) {
+    Medication m = repo.findById(id).orElseThrow();
+    m.setName(dto.name());
+    m.setReference(dto.reference());
+    m.setPrice(dto.price());
+    m.setDosage(dto.dosage());
+    m.setSupplier(dto.supplier());
+    m.setForm(dto.form());
+    m.setStorage(dto.storage());
+    return repo.save(m);
+}
+
 
     public void delete(Long id) {
         repo.deleteById(id);
