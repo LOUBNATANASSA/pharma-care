@@ -40,4 +40,9 @@ public class MedicationController {
     public void delete(@PathVariable Long id) {
         service.delete(id);
     }
+
+    @PutMapping("/{id}")
+public Medication update(@PathVariable Long id, @RequestBody MedicationDTO dto) {
+    return service.update(id, dto);
+}
 }
