@@ -44,5 +44,7 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.11.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel:2.8.1")
     implementation("androidx.lifecycle:lifecycle-livedata:2.8.1")
+    implementation ("androidx.recyclerview:recyclerview:1.3.2")
+
 
 }
