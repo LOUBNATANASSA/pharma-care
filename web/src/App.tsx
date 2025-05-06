@@ -1,13 +1,38 @@
-import MedicationForm from "./components/MedicationForm";
-import MedicationList from "./components/MedicationList";
+import Home from "./components/Home";
+import MedicationSection from "./components/MedicationSection";
 
+import "./App.css";
+
+import { useState } from 'react';
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <>
-      <h1>PharmaCare App</h1>
-      <MedicationForm />
-      <MedicationList />
-    </>
+<div className="app">
+      <nav className="navbar">
+        <div className="logo">PharmaCare</div>
+
+        <div className="burger" onClick={() => setMenuOpen(!menuOpen)}>
+          ☰
+        </div>
+
+        <ul className={`nav-links ${menuOpen ? "show" : ""}`}>
+          <li><a href="#">Accueil</a></li>
+          <li><a href="#medications">Médicaments</a></li>
+          <li><a href="#">Lots</a></li>
+          <li><a href="#">Stocks</a></li>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Sign up</a></li>
+
+        </ul>
+      </nav>
+
+
+      <Home />
+
+      <main className="main-grid" id="medications">
+  <MedicationSection />
+</main>
+    </div>
   );
 }
 
