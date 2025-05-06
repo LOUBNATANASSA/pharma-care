@@ -19,13 +19,26 @@ public class Lot {
     @Column(nullable = false)
     private int maxQuantite;
 
+    @Column(nullable = false)
+    private String type;
+
     public Lot() {}
 
-    public Lot(int id, String nom_lot, LocalDate dateReception, int maxQuantite) {
+    public Lot(int id, String nom_lot, LocalDate dateReception, int maxQuantite, String type) {
         this.id = id;
         Nom_lot = nom_lot;
         this.dateReception = dateReception;
         this.maxQuantite = maxQuantite;
+        this.type = type;
+    }
+
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     // Getters and setters

@@ -1,4 +1,5 @@
 package com.pharma.backend.domain;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.persistence.*;
 
@@ -30,9 +31,20 @@ public class Medication {
     @Column(nullable = false)
     private String storage;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "lot_id", nullable = false)
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+    private Lot lot;
+
+
+    @Column(nullable = false)
+    private String etat_stock;
+
+
+
     public Medication() {}
 
-    public Medication(Long id, String name, String reference, double price, String dosage, String supplier, String form, String storage) {
+    public Medication(Long id, String name, String reference, double price, String dosage, String supplier, String form, String storage, Lot lot, String etat_stock) {
         this.id = id;
         this.name = name;
         this.reference = reference;
@@ -41,6 +53,29 @@ public class Medication {
         this.supplier = supplier;
         this.form = form;
         this.storage = storage;
+        this.lot = lot;
+        this.etat_stock = etat_stock;
+    }
+
+    @Transient
+    public String getNomLot() {
+        return lot != null ? lot.getNom_lot() : null;
+    }
+
+    public Lot getLot() {
+        return lot;
+    }
+
+    public void setLot(Lot medLot) {
+        this.lot = medLot;
+    }
+
+    public String getEtat_stock() {
+        return etat_stock;
+    }
+
+    public void setEtat_stock(String etat_stock) {
+        this.etat_stock = etat_stock;
     }
 
     public Long getId() {

@@ -31,6 +31,7 @@ public class LotService {
         lot.setNom_lot(dto.Nom_lot());
         lot.setDateReception(dto.dateReception());
         lot.setMaxQuantite(dto.maxQuantite());
+        lot.setType(dto.type());
         return lotRepository.save(lot);
     }
 
@@ -41,6 +42,7 @@ public class LotService {
         lot.setNom_lot(dto.Nom_lot());
         lot.setDateReception(dto.dateReception());
         lot.setMaxQuantite(dto.maxQuantite());
+        lot.setType(dto.type());
         return lotRepository.save(lot);
     }
 
