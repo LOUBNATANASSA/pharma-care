@@ -1,0 +1,126 @@
+.home-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-color: #f5f2ff;
+    padding: 60px;
+    padding-top: 100px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  
+  .home-left {
+    flex: 1 1 500px;
+    animation: fadeUp 1s ease forwards;
+  }
+  
+  .home-right {
+    flex: 1 1 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeUp 1.2s ease forwards;
+  }
+  
+  .pharmacy-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: opacity 1s ease-in-out;
+    object-fit: cover;
+    height: auto;
+  }
+  
+  .subtitle {
+    color: #6b5ca5;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .title {
+    font-size: 2.8em;
+    font-weight: 800;
+    color: #2c2c4a;
+    margin-bottom: 20px;
+    line-height: 1.3;
+  }
+  
+  .description {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .cta-button {
+    background-color: #6b5ca5;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #594b8b;
+  }
+  
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* 🔄 Scrolling des partenaires */
+  .partners-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #6b5ca5;
+    color: white;
+    font-weight: 500;
+    font-size: 1em;
+    overflow: hidden;
+  }
+  
+  .partners-bar span {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scrollText 15s linear infinite;
+  }
+  
+  @keyframes scrollText {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* ✅ Responsive */
+  @media (max-width: 900px) {
+    .home-container {
+      flex-direction: column;
+      padding: 40px 20px;
+      text-align: center;
+    }
+  
+    .pharmacy-image {
+      margin-top: 30px;
+      max-width: 100%;
+    }
+  }
+  

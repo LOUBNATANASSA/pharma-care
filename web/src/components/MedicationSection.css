@@ -1,0 +1,37 @@
+.medication-section {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 20px;
+    background-color: #f5f2ff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+  }
+  
+  .medication-toggle-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .medication-toggle-buttons button {
+    padding: 12px 20px;
+    background-color: white;
+    border: 2px solid #6b5ca5;
+    color: #6b5ca5;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .medication-toggle-buttons button:hover {
+    background-color: #6b5ca5;
+    color: white;
+  }
+  
+  .medication-toggle-buttons button.active {
+    background-color: #6b5ca5;
+    color: white;
+  }
+  

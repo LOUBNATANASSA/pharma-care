@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { addMedication } from "../services/medicationService";
+import './MedicationForm.css';
 
 export default function MedicationForm() {
   const [form, setForm] = useState({
@@ -41,18 +42,24 @@ export default function MedicationForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ marginBottom: "20px" }}>
-      {Object.keys(form).map((key) => (
-        <input
-          key={key}
-          name={key}
-          value={form[key as keyof typeof form]}
-          onChange={handleChange}
-          placeholder={key}
-          style={{ margin: "5px", padding: "5px" }}
-        />
-      ))}
-      <button type="submit" style={{ padding: "5px 10px" }}>➕ Ajouter</button>
-    </form>
+    <div className="medication-form-container">
+      <h2>Ajouter un médicament</h2>
+      <form onSubmit={handleSubmit} className="medication-form">
+        {Object.keys(form).map((key) => (
+          <div className="form-group" key={key}>
+             <label htmlFor={key}>{key.charAt(0).toUpperCase() + key.slice(1)}</label>
+
+            <input
+              name={key}
+              value={form[key as keyof typeof form]} 
+              onChange={handleChange}
+              placeholder={key}
+              type={key === "price" ? "number" : "text"}
+            />
+          </div>
+        ))}
+        <button type="submit" className="btn-add">➕ Ajouter</button>
+      </form>
+    </div>
   );
 }
