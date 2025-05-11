@@ -28,7 +28,7 @@ public class LotService {
 
     public Lot createLot(LotDTO dto) {
         Lot lot = new Lot();
-        lot.setNom_lot(dto.Nom_lot());
+        lot.setNom_lot(dto.nom_lot());
         lot.setDateReception(dto.dateReception());
         lot.setMaxQuantite(dto.maxQuantite());
         lot.setType(dto.type());
@@ -39,7 +39,7 @@ public class LotService {
         Lot lot = lotRepository.findById(id).orElseThrow(() ->
                 new IllegalArgumentException("Lot avec l'id " + id + " introuvable")
         );
-        lot.setNom_lot(dto.Nom_lot());
+        lot.setNom_lot(dto.nom_lot());
         lot.setDateReception(dto.dateReception());
         lot.setMaxQuantite(dto.maxQuantite());
         lot.setType(dto.type());
