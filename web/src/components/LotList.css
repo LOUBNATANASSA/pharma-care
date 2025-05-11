@@ -1,103 +1,98 @@
-.medication-list-container {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #ffffff;
-    max-width: 600px;
-    margin: auto;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    border-top: 5px solid #6b5ca5;
-  }
-  
-  .medication-list-container h2 {
-    text-align: center;
-    color: #2c3e50;
-    font-size: 1.6em;
-    margin-bottom: 25px;
-  }
-  
-  .medication-list-container ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .medication-list-container li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f9f9f9;
-    padding: 16px;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    margin-bottom: 12px;
-    transition: background-color 0.2s ease;
-  }
-  
-  .medication-list-container li:hover {
-    background-color: #f1f1f1;
-  }
-  
-  .medication-details {
-    flex-grow: 1;
-    color: #37474f;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items: center;
-  }
-  
-  .medication-details .med-name {
-    font-weight: bold;
-    color: #2c3e50;
-  }
-  
-  .medication-details .med-price {
-    font-weight: bold;
-    color: #4caf50;
-  }
-  
-  .medication-actions button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.3em;
-    margin-left: 8px;
-    transition: transform 0.2s ease;
-  }
-  
-  .medication-actions button:hover {
-    transform: scale(1.1);
-  }
-  
-  .btn-edit:hover {
-    color: #6b5ca5;
-  }
-  
-  .btn-delete:hover {
-    color: #d32f2f;
-  }
-  
-  /* Formulaire d’édition */
-  .edit-form {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    flex-grow: 1;
-  }
-  
-  .edit-form input[type="text"],
-  .edit-form input[type="number"] {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 0.9em;
-    flex: 1 1 100px;
-  }
-  
-  .edit-form input:focus {
-    border-color: #6b5ca5;
-    outline: none;
-    box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
-  }
-  
+.lot-list-container {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  max-width: 600px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid #6b5ca5;
+}
+
+.lot-list-container h2 {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 1.6em;
+  margin-bottom: 25px;
+}
+
+.lot-list-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lot-list-container li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  transition: background-color 0.2s ease;
+}
+
+.lot-list-container li:hover {
+  background-color: #f1f1f1;
+}
+
+.lot-details {
+  flex-grow: 1;
+  color: #37474f;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.lot-name {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.lot-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3em;
+  margin-left: 8px;
+  transition: transform 0.2s ease;
+}
+
+.lot-actions button:hover {
+  transform: scale(1.1);
+}
+
+.btn-edit:hover {
+  color: #6b5ca5;
+}
+
+.btn-delete:hover {
+  color: #d32f2f;
+}
+
+/* Formulaire d’édition */
+.edit-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.edit-form input[type="text"],
+.edit-form input[type="number"],
+.edit-form input[type="date"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.9em;
+  flex: 1 1 100px;
+}
+
+.edit-form input:focus {
+  border-color: #6b5ca5;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
+}

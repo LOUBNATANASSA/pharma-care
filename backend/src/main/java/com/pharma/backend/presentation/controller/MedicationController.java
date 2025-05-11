@@ -3,6 +3,7 @@ package com.pharma.backend.presentation.controller;
 import com.pharma.backend.application.MedicationService;
 import com.pharma.backend.domain.Medication;
 import com.pharma.backend.presentation.dto.MedicationDTO;
+import com.pharma.backend.presentation.dto.MedicationResponseDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,10 +20,18 @@ public class MedicationController {
         this.service = service;
     }
 
-    @GetMapping
-    public List<Medication> getAll() {
-        return service.findAll();
-    }
+   @GetMapping
+public List<MedicationResponseDTO> getAll() {
+    return service.findAll().stream().map(m -> {
+        var lot = m.getLot();             // encore LAZY, mais on y accède
+        return new MedicationResponseDTO(
+            m.getId(), m.getName(), m.getReference(), m.getPrice(),
+            m.getDosage(), m.getSupplier(), m.getForm(), m.getStorage(),
+            m.getEtat_stock(),
+            lot.getId(), lot.getNom_lot()
+        );
+    }).toList();
+}
 
     @GetMapping("/{id}")
     public Medication getOne(@PathVariable Long id) {
