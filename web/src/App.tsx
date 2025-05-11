@@ -1,5 +1,6 @@
 import Home from "./components/Home";
 import MedicationSection from "./components/MedicationSection";
+import LotSection from "./components/LotSection";
 
 import "./App.css";
 
@@ -18,7 +19,7 @@ function App() {
         <ul className={`nav-links ${menuOpen ? "show" : ""}`}>
           <li><a href="#">Accueil</a></li>
           <li><a href="#medications">Médicaments</a></li>
-          <li><a href="#">Lots</a></li>
+          <li><a href="lots">Lots</a></li>
           <li><a href="#">Stocks</a></li>
           <li><a href="#">Dashboard</a></li>
           <li><a href="#">Sign up</a></li>
@@ -32,6 +33,9 @@ function App() {
       <main className="main-grid" id="medications">
   <MedicationSection />
 </main>
+      <main className="main-grid" id="lots">
+      <LotSection />
+    </main>
     </div>
   );
 }

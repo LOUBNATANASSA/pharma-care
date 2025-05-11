@@ -1,4 +1,4 @@
-package com.pharma.backend.presentation;
+package com.pharma.backend.presentation.controller;
 
 import com.pharma.backend.application.LotService;
 import com.pharma.backend.domain.Lot;
