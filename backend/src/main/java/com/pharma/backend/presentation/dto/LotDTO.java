@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public record LotDTO(
         int lotId,
-        String Nom_lot,
+        String nom_lot,
         LocalDate dateReception,
         int maxQuantite,
         String type

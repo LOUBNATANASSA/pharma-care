@@ -5,7 +5,7 @@ import './LotForm.css';
 
 export default function LotForm() {
   const [form, setForm] = useState({
-    nom_lot: "",
+    nom_lot: "nvb",
     dateReception: "",
     maxQuantite: 0,
     type: ""
