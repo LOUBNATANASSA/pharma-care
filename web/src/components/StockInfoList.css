@@ -1,0 +1,84 @@
+.stock-list-container {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid #56bb93;
+}
+
+.stock-list-container h2 {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 1.6em;
+  margin-bottom: 25px;
+}
+
+.stock-list-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.stock-list-container li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  transition: background-color 0.2s ease;
+}
+
+.stock-list-container li:hover {
+  background-color: #f1f1f1;
+}
+
+.stock-details {
+  flex-grow: 1;
+  color: #37474f;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.stock-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3em;
+  margin-left: 8px;
+  transition: transform 0.2s ease;
+}
+
+.stock-actions button:hover {
+  transform: scale(1.1);
+}
+
+.btn-edit:hover {
+  color: #56bb93;
+}
+
+.btn-delete:hover {
+  color: #d32f2f;
+}
+
+.edit-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.edit-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.9em;
+  flex: 1 1 100px;
+}

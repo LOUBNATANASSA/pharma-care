@@ -6,7 +6,7 @@
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    border-top: 5px solid #6b5ca5;
+    border-top: 5px solid #56bb93;
   }
   
   .medication-list-container h2 {
@@ -71,7 +71,7 @@
   }
   
   .btn-edit:hover {
-    color: #6b5ca5;
+    color: #56bb93;
   }
   
   .btn-delete:hover {
@@ -96,7 +96,7 @@
   }
   
   .edit-form input:focus {
-    border-color: #6b5ca5;
+    border-color: #56bb93;
     outline: none;
     box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
   }

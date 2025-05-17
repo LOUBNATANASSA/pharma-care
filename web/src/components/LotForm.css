@@ -6,7 +6,7 @@
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  border-top: 5px solid #6b5ca5;
+  border-top: 5px solid #56bb93;
 }
 
 .lot-form-container h2 {
@@ -47,7 +47,7 @@
 }
 
 .lot-form input:focus {
-  border-color: #6b5ca5;
+  border-color: #56bb93;
   outline: none;
   box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
 }
@@ -55,7 +55,7 @@
 .lot-form .btn-add {
   flex-basis: 100%;
   padding: 14px;
-  background-color: #6b5ca5;
+  background-color: #56bb93;
   color: white;
   border: none;
   border-radius: 6px;
@@ -67,7 +67,7 @@
 }
 
 .lot-form .btn-add:hover {
-  background-color: #5a4a94;
+  background-color: #56bb93;
 }
 
 .lot-form .btn-add:disabled {

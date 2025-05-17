@@ -1,0 +1,72 @@
+
+.stock-form-container {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  max-width: 500px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid #56bb93;
+}
+
+.stock-form-container h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  font-size: 1.6em;
+}
+
+.stock-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-group {
+  flex: 1 1 100%;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: #2c3e50;
+  font-weight: 500;
+  font-size: 0.9em;
+}
+
+.stock-form input,
+.stock-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cfd8dc;
+  border-radius: 6px;
+  font-size: 0.95em;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stock-form input:focus,
+.stock-form select:focus {
+  border-color: #56bb93;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(107, 92, 165, 0.2);
+}
+
+.stock-form .btn-add {
+  flex-basis: 100%;
+  padding: 14px;
+  background-color: #56bb93;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.stock-form .btn-add:hover {
+  background-color: #56bb93;
+}

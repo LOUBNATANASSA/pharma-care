@@ -31,7 +31,7 @@ body {
 .logo {
   font-size: 1.5em;
   font-weight: bold;
-  color: #6b5ca5;
+  color: #56bb93;
 }
 
 /* Liens navigation */
@@ -44,7 +44,7 @@ body {
 }
 
 .nav-links li a {
-  color: #6b5ca5;
+  color: #56bb93;
   text-decoration: none;
   font-weight: 500;
   padding: 10px 18px;
@@ -53,7 +53,7 @@ body {
 }
 
 .nav-links li a:hover {
-  background-color: #6b5ca5;
+  background-color: #56bb93;
   color: white;
   box-shadow: 0 4px 10px rgba(107, 92, 165, 0.2);
 }
@@ -63,7 +63,7 @@ body {
   display: none;
   font-size: 1.8em;
   cursor: pointer;
-  color: #6b5ca5;
+  color: #56bb93;
 }
 
 @media (max-width: 768px) {
