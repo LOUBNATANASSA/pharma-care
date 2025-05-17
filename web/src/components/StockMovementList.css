@@ -1,0 +1,52 @@
+
+.movement-list-container {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  border-top: 5px solid #56bb93;
+}
+
+.movement-list-container h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.movement-list-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.movement-list-container li {
+  background: #f9f9f9;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movement-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.movement-actions .btn-delete {
+  background: none;
+  border: none;
+  color: #e53935;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.movement-actions .btn-delete:hover {
+  transform: scale(1.2);
+}

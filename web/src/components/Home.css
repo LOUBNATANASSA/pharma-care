@@ -36,7 +36,7 @@
   }
   
   .subtitle {
-    color: #6b5ca5;
+    color: #56bb93;
     font-size: 1.2em;
     margin-bottom: 10px;
   }
@@ -57,7 +57,7 @@
   }
   
   .cta-button {
-    background-color: #6b5ca5;
+    background-color: #56bb93;
     color: white;
     padding: 14px 28px;
     border-radius: 8px;
@@ -67,7 +67,7 @@
   }
   
   .cta-button:hover {
-    background-color: #594b8b;
+    background-color: #56bb93;
   }
   
   @keyframes fadeUp {
@@ -88,7 +88,7 @@
     left: 0;
     width: 100%;
     padding: 10px 0;
-    background-color: #6b5ca5;
+    background-color: #56bb93;
     color: white;
     font-weight: 500;
     font-size: 1em;

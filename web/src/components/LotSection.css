@@ -17,8 +17,8 @@
 .lot-toggle-buttons button {
   padding: 12px 20px;
   background-color: white;
-  border: 2px solid #6b5ca5;
-  color: #6b5ca5;
+  border: 2px solid #56bb93;
+  color: #56bb93;
   font-weight: 600;
   font-size: 1em;
   border-radius: 8px;
@@ -27,12 +27,12 @@
 }
 
 .lot-toggle-buttons button:hover {
-  background-color: #6b5ca5;
+  background-color: #56bb93;
   color: white;
 }
 
 .lot-toggle-buttons button.active {
-  background-color: #6b5ca5;
+  background-color: #56bb93;
   color: white;
 }
 
