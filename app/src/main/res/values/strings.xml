@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">pharmamobile</string>
+    <string name="medicaments">Médicaments</string>
+    <string name="app_title">PharmaCar Management</string>
+    <string name="medications">Médicaments</string>
+    <string name="lots">Lots</string>
+    <string name="stock">Stock</string>
+    <string name="logistics">Logistique</string>
+    <string name="retour">Retour</string>
+    <string name="nom">Nom</string>
+    <string name="quantite">Quantité</string>
+    <string name="emplacement">Emplacement</string>
+    <string name="quantite_disponible">Quantité disponible</string>
+    <string name="medicament">Médicament</string>
+    <string name="derniere_mise_a_jour">Dernière mise à jour</string>
+    <string name="type_operation">Type opération</string>
+    <string name="date">Date</string>
+    <string name="expiration">Date expiration</string>
+    <string name="lot_number">Numéro du lot</string>
+    <string name="medication">Médicament</string>
+    <string name="quantity">Quantité</string>
+    <string name="source">Source</string>
+    <string name="destination">Destination</string>
+</resources>

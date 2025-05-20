@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Emplacement"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtAvailableQty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quantité disponible" />
+
+    <TextView
+        android:id="@+id/txtMedication"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Médicament" />
+
+    <TextView
+        android:id="@+id/txtUpdated"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dernière mise à jour" />
+</LinearLayout>
